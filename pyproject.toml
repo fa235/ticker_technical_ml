@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mlextensions"
+name = "ticker-technical-ml"
 version = "0.1.0"
 description = "Machine learning extensions for technical analysis and trading indicators"
 readme = "README.md"

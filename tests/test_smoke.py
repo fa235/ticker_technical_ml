@@ -1,7 +1,8 @@
 import numpy as np
 import pandas as pd
 
-import mlextensions as ml
+import ticker_technical_ml as ml
+
 
 
 def sample_ohlc(n=300):

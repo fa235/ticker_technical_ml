@@ -1,0 +1,17 @@
+LICENSE
+NOTICE
+README.md
+pyproject.toml
+src/ticker_technical_ml/__init__.py
+src/ticker_technical_ml/backtest.py
+src/ticker_technical_ml/colors.py
+src/ticker_technical_ml/filters.py
+src/ticker_technical_ml/indicators.py
+src/ticker_technical_ml/transforms.py
+src/ticker_technical_ml/utils.py
+src/ticker_technical_ml.egg-info/PKG-INFO
+src/ticker_technical_ml.egg-info/SOURCES.txt
+src/ticker_technical_ml.egg-info/dependency_links.txt
+src/ticker_technical_ml.egg-info/requires.txt
+src/ticker_technical_ml.egg-info/top_level.txt
+tests/test_smoke.py
