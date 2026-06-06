@@ -1,0 +1,17 @@
+LICENSE
+NOTICE
+README.md
+pyproject.toml
+src/mlextensions/__init__.py
+src/mlextensions/backtest.py
+src/mlextensions/colors.py
+src/mlextensions/filters.py
+src/mlextensions/indicators.py
+src/mlextensions/transforms.py
+src/mlextensions/utils.py
+src/mlextensions.egg-info/PKG-INFO
+src/mlextensions.egg-info/SOURCES.txt
+src/mlextensions.egg-info/dependency_links.txt
+src/mlextensions.egg-info/requires.txt
+src/mlextensions.egg-info/top_level.txt
+tests/test_smoke.py
