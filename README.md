@@ -1,4 +1,4 @@
-# mlextensions
+# ticker_technical_ml
 
 A Python/pandas helper library for technical analysis and machine learning features on trading data. Provides normalized RSI, CCI, WaveTrend, ADX, filters, color helpers, smoothing transforms, and a simple calibration backtest helper.
 
@@ -24,7 +24,7 @@ pip install -e .
 Or from the zip after extracting it:
 
 ```bash
-cd mlextensions_py
+cd ticker_technical_ml
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -e .
@@ -34,20 +34,20 @@ pip install -e .
 
 ```python
 import pandas as pd
-import mlextensions as ml
+import ticker_technical_ml as ttm
 
 # df must have columns: open, high, low, close
 # Example:
 # df = pd.read_csv("ohlc.csv", parse_dates=["date"], index_col="date")
 
-rsi_feature = ml.n_rsi(df["close"], 14, 1)
-cci_feature = ml.n_cci(df["close"], 20, 1)
-wt_feature = ml.n_wt((df["high"] + df["low"] + df["close"]) / 3, 10, 11)
-adx_feature = ml.n_adx(df["high"], df["low"], df["close"], 20)
+rsi_feature = ttm.n_rsi(df["close"], 14, 1)
+cci_feature = ttm.n_cci(df["close"], 20, 1)
+wt_feature = ttm.n_wt((df["high"] + df["low"] + df["close"]) / 3, 10, 11)
+adx_feature = ttm.n_adx(df["high"], df["low"], df["close"], 20)
 
-vol_ok = ml.filter_volatility(df["high"], df["low"], df["close"], 1, 10, True)
-regime_ok = ml.regime_filter(df["close"], df["high"], df["low"], threshold=-0.1, use_regime_filter=True)
-adx_ok = ml.filter_adx(df["high"], df["low"], df["close"], 14, 20, True)
+vol_ok = ttm.filter_volatility(df["high"], df["low"], df["close"], 1, 10, True)
+regime_ok = ttm.regime_filter(df["close"], df["high"], df["low"], threshold=-0.1, use_regime_filter=True)
+adx_ok = ttm.filter_adx(df["high"], df["low"], df["close"], 14, 20, True)
 
 all_filters_ok = vol_ok & regime_ok & adx_ok
 ```
@@ -56,7 +56,7 @@ all_filters_ok = vol_ok & regime_ok & adx_ok
 ## Backtest helper
 
 ```python
-stats = ml.backtest(
+stats = ttm.backtest(
     high=df["high"],
     low=df["low"],
     open_=df["open"],
